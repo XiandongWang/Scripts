@@ -3,8 +3,13 @@ import json
 import pandas as pd
 from PIL import Image
 
-def main(fmt):
 
+def main(fmt):
+    """
+
+    :param fmt: 代表是coco格式还是voc格式
+    :return: 返回一个csv文件，里面分别是图像的高度，宽度和数量
+    """
     height = []
     width = []
     num = []
@@ -47,9 +52,6 @@ def main(fmt):
     dataframe.to_csv("ouc.csv", index=False, sep=',')
 
 
-
-
 if __name__ == '__main__':
-
-    fmt = "voc_format" # or "voc_format"
+    fmt = "voc_format"  # or "voc_format"
     main(fmt)
